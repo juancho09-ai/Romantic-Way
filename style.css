@@ -38,11 +38,11 @@ canvas {
     z-index: 10;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* 💻 Computadora: tamaño muy fino y sutil */
+    
+    /* 💻 Tamaño fino para computadora */
     font-size: 9.5px; 
     font-weight: bold;
     white-space: nowrap;
-    /* Compactamos aún más el fondo negro translúcido */
     padding: 3px 8px; 
     background: rgba(0, 0, 0, 0.45); 
     border-radius: 20px;
@@ -51,12 +51,18 @@ canvas {
     transform: translate(-50%, -50%); 
     transition: opacity 0.3s ease;
     opacity: 0; 
+
+    /* 🛠️ SOLUCIÓN PARA EL BUG DE LOS EMOJIS: */
+    line-height: 1;             /* Fuerza a que el renglón no se estire por el emoji */
+    display: inline-flex;       /* Alinea perfectamente texto y emoji en bloque compacto */
+    align-items: center;        
+    gap: 4px;                   /* Separa sutilmente el emoji final del texto */
 }
 
 /* 📱 Estilos especiales para pantallas de celulares */
 @media (max-width: 768px) {
     .space-label {
-        /* 📱 Teléfono: tamaño minúsculo pero perfectamente legible */
+        /* 📱 Tamaño minúsculo definitivo para celular */
         font-size: 8px;       
         padding: 2px 6px;      
         text-shadow: 0 0 3px rgba(236, 72, 153, 0.9);
