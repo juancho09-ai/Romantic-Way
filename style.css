@@ -38,16 +38,16 @@ canvas {
     z-index: 10;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* 💻 Tamaño para Computadora (Antes estaba en 14px) */
-    font-size: 11px; 
+    /* 💻 Computadora: tamaño muy fino y sutil */
+    font-size: 9.5px; 
     font-weight: bold;
     white-space: nowrap;
-    /* Reducimos el margen interno del cartelito */
-    padding: 4px 10px; 
+    /* Compactamos aún más el fondo negro translúcido */
+    padding: 3px 8px; 
     background: rgba(0, 0, 0, 0.45); 
     border-radius: 20px;
     backdrop-filter: blur(4px);
-    text-shadow: 0 0 6px rgba(236, 72, 153, 0.8); 
+    text-shadow: 0 0 5px rgba(236, 72, 153, 0.8); 
     transform: translate(-50%, -50%); 
     transition: opacity 0.3s ease;
     opacity: 0; 
@@ -56,9 +56,9 @@ canvas {
 /* 📱 Estilos especiales para pantallas de celulares */
 @media (max-width: 768px) {
     .space-label {
-        /* 📱 Tamaño para Teléfonos (Antes estaba en 11px) */
-        font-size: 9px;       
-        padding: 3px 6px;      
-        text-shadow: 0 0 4px rgba(236, 72, 153, 0.9);
+        /* 📱 Teléfono: tamaño minúsculo pero perfectamente legible */
+        font-size: 8px;       
+        padding: 2px 6px;      
+        text-shadow: 0 0 3px rgba(236, 72, 153, 0.9);
     }
 }
