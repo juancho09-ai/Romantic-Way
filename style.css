@@ -38,24 +38,27 @@ canvas {
     z-index: 10;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    /* 💻 Tamaño para Computadora (Antes estaba en 14px) */
+    font-size: 11px; 
     font-weight: bold;
     white-space: nowrap;
-    padding: 6px 12px;
-    background: rgba(0, 0, 0, 0.4); /* Fondo sutil para leer bien el texto */
+    /* Reducimos el margen interno del cartelito */
+    padding: 4px 10px; 
+    background: rgba(0, 0, 0, 0.45); 
     border-radius: 20px;
     backdrop-filter: blur(4px);
-    text-shadow: 0 0 8px rgba(236, 72, 153, 0.8); /* Brillo rosa de fondo */
-    transform: translate(-50%, -50%); /* Centra el texto exactamente en su coordenada */
+    text-shadow: 0 0 6px rgba(236, 72, 153, 0.8); 
+    transform: translate(-50%, -50%); 
     transition: opacity 0.3s ease;
-    opacity: 0; /* Empiezan invisibles por si quedan detrás de la cámara */
+    opacity: 0; 
 }
 
 /* 📱 Estilos especiales para pantallas de celulares */
 @media (max-width: 768px) {
     .space-label {
-        font-size: 11px;       /* Letra un poco más pequeña */
-        padding: 4px 8px;      /* Menos espacio de fondo */
-        text-shadow: 0 0 5px rgba(236, 72, 153, 0.9);
+        /* 📱 Tamaño para Teléfonos (Antes estaba en 11px) */
+        font-size: 9px;       
+        padding: 3px 6px;      
+        text-shadow: 0 0 4px rgba(236, 72, 153, 0.9);
     }
 }
